@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ROCHE - Barcode Generator</title>
+</head>
+<text> Barcode Generator <br> </text>
+
+<body>
+    <input type="text" placeholder="User ID..." id="txtID">
+    <button accesskey="1" type="button" onclick="getInputValue();">Generate</button>
+	<button accesskey="2" type="button" onclick="clearVal();">Clear</button>
+	<br>
+	<text> Press alt + 1 to generate or press button. </text>
+	<br>
+	<text> Press alt + 2 to clear or press button. </text>
+    <div style='text-align: center;'>
+
+  <img id='imgbox'
+       src='https://barcode.tec-it.com/barcode.ashx?data=ABC-abc-1234&code=Code128&dpi=96&dataseparator='/>
+	   
+	   <text> <br> <br> Please Right-click on barcode then save<text/>
+</div>
+	
+</body>
+
+
+
+
+<footer>
+
+<div style="position: relative;background-color: white; width: 600px; height: 800px;">    
+
+    <div style="position: absolute; bottom: 150px; background-color: white">
+    Farid G.Issa
+    </div>
+	
+</div>
+
+</footer>
+</html>
+
+<script>
+	
+function getInputValue(){
+var inputVal = document.getElementById("txtID").value;
+			
+document.getElementById('imgbox').src = "https://barcode.tec-it.com/barcode.ashx?data=" + inputVal + "&code=Code128&dpi=96&dataseparator=";
+}
+		
+</script>
+
+<script>
+	
+function clearVal(){
+document.getElementById("txtID").value=" ";	
+}
+	
+</script>
